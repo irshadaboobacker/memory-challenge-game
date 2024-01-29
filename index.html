@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Challenge Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="mem-game">
+        <div id="screen-container">
+            <h1 class="header-main">Memory Challenge Game</h1>
+            <div class="intro-container">
+                <div>"Welcome to the Memory Challenge Game!In this exciting and brain-teasing game,
+                    your memory and concentration skills will be put to the test. Your goal is to remember and match
+                    pairs
+                    of hidden cards within a limited time. Are you ready to sharpen your memory and have a blast? <br>
+                    Let's begin the Memory Challenge Game!"</div>
+                <div id="startContainer">
+                    <button id="startButton">Click here to start!</button>
+
+                </div>
+
+            </div>
+
+            
+            <div class="select-container">
+                <form>
+                    <h3 id="level-head"> Select Level : </h3>
+                    <select name="level" id="timeoutSpeed" onchange="selectSpeed()">
+
+                        <option>Beginner</option>
+                        <option>Intermediate</option>
+                        <option>Hard</option>
+
+                    </select>
+                </form>
+
+
+            </div>
+            <button onclick="openFullscreen()" id="fullscreenbtn"><img id="image" src="maximize.png"></button>
+
+        </div>
+
+        <div id="game-container">
+            <div class="column">
+
+                <div class="main-container"></div>
+                <div class="playerOne">
+                    <div id="sub-container">
+                        <h3>Your Moves : <span id="movesCount"></span>
+                            <h3 class="timer-head">time: <span id="time1"></span></h3>
+
+                        </h3>
+                    </div>
+
+                </div>
+                <div>
+                    <button onClick="exit()" id="exitButton">Exit</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="end-container">
+            <div class="userwon-container">
+                <h2 id="won-container"></h2>
+                <h2 id="time-taken"></h2>
+                <h2 id="total-moves"></h2>
+            </div>
+            <div>
+                <button onClick="reset()" id="reset"></button>
+            </div>
+
+
+        </div>
+
+        <div id="failed-container">
+            <div class="userwon-container">
+                <h2 id="timeout-container"></h2>
+            </div>
+            <div>
+                <button onClick="reset()" id="startagain"></button>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+    <script src="game.js"></script>
+</body>
+
+</html>
